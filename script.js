@@ -1,19 +1,22 @@
-// complete the given function
-
 function palindrome(str){
-var s =	str.toLowerCase()
-var i = 0
-	var j = s.length - 1;
-	while (i<j) {
-		if(s.charAt(i)===s.charAt(j)) {
-			i++;
-			j--;
+
+	// let arr=str.split(" ");
+ //    let s="";
+	//  arr.forEach((str)=>{
+	// 	  if(str!=''){
+ //           s=s+str;
+	// 	  }
+	//  })
+	let s=str.toLowerCase();
+let start=0;
+let end=s.length-1;
+	while(start<end){
+		if(s[start]!=s[end]){
+			return false;
 		}
-		else {
-			return false
-		}
-		
+		start++;
+		end--;
 	}
-	return true
+	return true;
 }
 module.exports = palindrome
